@@ -41,12 +41,12 @@ class Video(FastAPI):
     def __init__(self):
         super().__init__()
         self.logger = self.init_logger()
-        self.client_down = VodUploadClient("AKIDCR4fQDyonkfUME8AKTVZZWK2kBXfhgfX", "vnjnsu14425FNYr5RsMpNyibcsEglwdV")
+        self.client_down = VodUploadClient("", "")
         self.concurrent_upload_number = 10
         self.split_class_id = int(os.environ.get("VOD_ SPLIT_MATERIAL", 1196410))
         self.SubAppId = int(os.environ.get("VOD_SUB_APP_ID", 1500032969))
         self.raw_class_id = int(os.environ.get(" VOD_ORIGINAL_MATERIAL", 1196409))
-        self.cred = credential.Credential("AKIDsrihIyjZOBsjimt8TsN8yvv1AMh5dB44", "CPZcxdk6W39Jd4cGY95wvupoyMd0YFqW")
+        self.cred = credential.Credential("", "")
         self.client_vod = vod_client.VodClient(self.cred, "", self.clientProfile)
         self.video_codec = 'libx264'  # H.264 编码
         self.video_bitrate = '6000k'  # 码率 4000Kbps
