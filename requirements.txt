@@ -1,0 +1,10 @@
+uvicorn
+pydantic
+moviepy
+starlette
+fastapi
+vod_python_sdk
+fastapi-healthcheck
+python-ffmpeg
+gunicorn
+sentry_sdk
